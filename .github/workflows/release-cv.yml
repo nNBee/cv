@@ -1,0 +1,38 @@
+name: Release CV
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build and Release PDF
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Compile CV
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: cv.tex
+          texlive_version: 2026
+          os: debian
+          latexmk_use_lualatex: true
+          extra_system_packages: fonts-inter
+
+      - name: Rename PDF
+        run: mv cv.pdf Bereczki_Nandor_CV.pdf
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v3
+        with:
+          files: Bereczki_Nandor_CV.pdf
+          generate_release_notes: true
+          name: CV ${{ github.ref_name }}
