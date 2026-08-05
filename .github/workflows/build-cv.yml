@@ -1,0 +1,39 @@
+name: Build CV
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build PDF
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Compile CV
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: cv.tex
+          texlive_version: 2026
+          os: debian
+          latexmk_use_lualatex: true
+          extra_system_packages: fonts-inter
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v7
+        with:
+          name: bereczki-nandor-cv
+          path: cv.pdf
+          if-no-files-found: error
+          retention-days: 30
