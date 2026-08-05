@@ -13,11 +13,11 @@ The resume is written in LaTeX and automatically built into a PDF using GitHub A
 - Learning Management Systems
 - Document Management Systems
 
-## Status
+## Live PDF
 
-🚧 Work in progress
+The latest version of my resume is always available from the latest GitHub Release.
 
-The resume is currently being redesigned and migrated to a custom LaTeX template.
+➡️ https://github.com/nNBee/cv/releases/latest
 
 ## License
 
