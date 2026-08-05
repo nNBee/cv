@@ -1,12 +1,24 @@
-# CV
+# Curriculum Vitae
 
 This repository contains the source code for my professional resume.
 
-## Tech
+The resume is written in LaTeX and automatically built into a PDF using GitHub Actions.
 
-- LaTeX
-- GitHub Actions (coming soon)
+## Highlights
 
-## Build
+- Frontend Engineer with 3+ years of experience
+- React & TypeScript
+- Enterprise web applications
+- Authentication (OIDC/OAuth2)
+- Learning Management Systems
+- Document Management Systems
 
-The resume is compiled into a PDF automatically.
+## Status
+
+🚧 Work in progress
+
+The resume is currently being redesigned and migrated to a custom LaTeX template.
+
+## License
+
+MIT
