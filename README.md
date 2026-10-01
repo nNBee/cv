@@ -6,9 +6,10 @@ The resume is written in LaTeX and automatically built into a PDF using GitHub A
 
 ## Highlights
 
-- Frontend Engineer with 3+ years of experience
+- Frontend Developer with 3+ years of experience
 - React & TypeScript
 - Enterprise web applications
+- Automated frontend testing and CI
 - Authentication (OIDC/OAuth2)
 - Learning Management Systems
 - Document Management Systems
